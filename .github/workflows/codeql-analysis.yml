@@ -50,11 +50,9 @@ jobs:
     # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).
     # If this step fails, then you should remove it and run the build manually (see below)
     - name: Build
-      uses: adoptopenjdk/maven-openjdk11:latest
+      uses: docker://adoptopenjdk/maven-openjdk11:latest
       with:
-        args: |
-        cd /github/workspace/
-        mvn clean package
+        args: mvn clean package
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
