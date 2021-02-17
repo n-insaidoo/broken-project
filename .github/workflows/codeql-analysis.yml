@@ -34,7 +34,7 @@ jobs:
         # https://docs.github.com/en/free-pro-team@latest/github/finding-security-vulnerabilities-and-errors-in-your-code/configuring-code-scanning#changing-the-languages-that-are-analyzed
 
     container:
-      image: adoptopenjdk/maven-openjdk11:latest
+      image: nanainsaidoo95/code-scanning:java
 
     steps:
     - name: Checkout repository
