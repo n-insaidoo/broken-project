@@ -60,4 +60,4 @@ jobs:
 
     - name: Print sarif result file
       run: |
-        cat ${GITHUB_WORKSPACE}/results/java-custom.sarif
+        cat ${GITHUB_WORKSPACE}/../results/java-custom.sarif
