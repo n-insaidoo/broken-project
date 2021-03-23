@@ -58,6 +58,12 @@ jobs:
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
 
-    - name: Print sarif result file
+    - name: Print sarif result files
       run: |
+        echo "Default queries results"
+        echo
+        cat ${GITHUB_WORKSPACE}/../results/java-builtin.sarif
+        echo
+        echo "Custom queries results"
+        echo
         cat ${GITHUB_WORKSPACE}/../results/java-custom.sarif
